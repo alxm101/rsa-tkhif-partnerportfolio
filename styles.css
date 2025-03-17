@@ -208,3 +208,9 @@ footer {
   .timeline-item:nth-child(even), 
   .timeline-item:nth-child(odd) {
     align-self: flex-start;
+  }
+  .timeline-marker {
+    left: -30px !important;
+    right: auto !important;
+  }
+}
