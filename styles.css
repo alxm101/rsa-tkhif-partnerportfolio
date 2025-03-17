@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #FFFFFF;
+  color: #333;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero {
+  background-color: #FF934F;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline-section {
+  position: relative;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #FF934F;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+  padding: 1rem;
+}
+
+.timeline-item:nth-child(odd) {
+  align-self: flex-start;
+  text-align: right;
+  margin-left: 50%;
+}
+
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+  text-align: left;
+  margin-right: 50%;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FF934F;
+  border: 3px solid #FFFFFF;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+  left: -10px;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border: 2px solid #FF934F;
+}
+
+.gallery p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.passions-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.passions-content {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.passions-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.passions-content li {
+  margin: 0.5rem 0;
+  padding-left: 1em;
+  position: relative;
+}
+
+.passions-content li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #FF934F;
+}
+
+.contact-section {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-btn {
+  background-color: #18FF6D;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #12d957;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+  .timeline-item {
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 0;
+    text-align: left !important;
+  }
+  .timeline-item:nth-child(even), 
+  .timeline-item:nth-child(odd) {
+    align-self: flex-start;
